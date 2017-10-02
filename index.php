@@ -90,25 +90,53 @@
             <h3>Create an Account Now</h3>
             <h5>Because you want to know your customer</h5>
             
-            <form method="post" >
+            <form method="post" action="">
               <label for="signUpName">Name</label>
               <input class="form-control" type="text" name="signUpName" placeholder="UserName">
+              <br>
               <label for="signUpPassword">Password</label>
               <input class="form-control" type="password" name="signUpPassword" placeholder="Password">
+              <br>
               <label  for="signUpPassword2">Re-enter Password</label>
               <input class="form-control" type="password" name="signUpPassword2" placeholder="Re-enter password">
+              <br>
               <label for="signUpEmail">Email</label>
               <input type="email" name="signUpEmail" class="form-control" placeholder="Email">
+              <br>
               <label for="signUpWebsite">Website Name</label>
               <input type="text" name="signUpWebsite" placeholder="Your Website" class="form-control">
+              <br>
               <label for="signUpWebsiteType">Type</label>
               <br>
-              <label class="radio-inline"><input type="radio" name="optradio" value="eShopping">eShopping</label>
-              <label class="radio-inline"><input type="radio" name="optradio" value="Streaming">Streaming</label>
-              <label class="radio-inline"><input type="radio" name="optradio" value="Automotive">Automotive</label>
-              <label class="radio-inline"><input type="radio" name="optradio" value="eTravelBookings">eTravelBookings</label>
-              <label class="radio-inline"><input type="radio" name="optradio" value="ePayment">ePayment</label>
-              <input class="btn btn-success" type="submit" name="submit" value="signUp">
+              <label class="custom-control custom-radio">
+                <input id="radio1" name="optradio" value="eShopping" type="radio" class="custom-control-input">
+                <span class="custom-control-indicator"></span>
+                <span class="custom-control-description">eShopping</span>
+              </label>
+              <label class="custom-control custom-radio">
+                <input id="radio1" type="radio" name="optradio"  value="Streaming" type="radio" class="custom-control-input">
+                <span class="custom-control-indicator"></span>
+                <span class="custom-control-description">Streaming</span>
+              </label>
+              <label class="custom-control custom-radio">
+                <input id="radio1" type="radio" name="optradio" value="Automotive" type="radio" class="custom-control-input">
+                <span class="custom-control-indicator"></span>
+                <span class="custom-control-description">Automotive</span>
+              </label>
+              <label class="custom-control custom-radio">
+                <input id="radio1" type="radio" name="optradio" value="eTravelBookings" type="radio" class="custom-control-input">
+                <span class="custom-control-indicator"></span>
+                <span class="custom-control-description">eTravelBookings</span>
+              </label>
+              <label class="custom-control custom-radio">
+                <input id="radio1" type="radio" name="optradio" value="ePayment" type="radio" class="custom-control-input">
+                <span class="custom-control-indicator"></span>
+                <span class="custom-control-description">ePayment</span>
+              </label>
+              
+              <br>
+              <br>
+              <input class="btn btn-success form-control" type="submit" name="submit" value="signUp">
             </form>
         </div>
     </div>
@@ -122,19 +150,19 @@
     <div class="row">
     
       
-      <div class="col-md-3">
+      <div class="col-md-4">
         <img src="images/indexPhotos/myTube.png" class="img-circle" alt="Cinque Terre" width="280" height="210">
       </div>
       <div class="col-md-4">
         <img src="images/indexPhotos/planMyTrip.png" class="img-circle" alt="Cinque Terre" width="280" height="210">
       </div>
-      <div class="col-md-5">
+      <div class="col-md-4">
        <img src="images/indexPhotos/quickCharge.png" class="img-circle" alt="Cinque Terre" width="280" height="210">
        </div>
      </div>
      <div class="row">
       
-      <div class="col-md-5">
+      <div class="col-md-6">
         <img src="images/indexPhotos/catalogueCar.png" class="img-circle" alt="Cinque Terre" width="280" height="210">
       </div>
       <div class="col-md-6">
