@@ -1,7 +1,8 @@
 <?php  
+
 	include("connection.php");
-	$error="";
- 	 $message="";
+	
+  include("dataFromUser.php");
   if(mysqli_connect_error())
   {
 
@@ -29,7 +30,11 @@
          text-align: center;
          transition: background-color 1s ease-in; 
         
-         
+         background-image: url("images/indexPhotos/page1.jpg");
+       }
+       #myContainer
+       {
+        padding: 50px;
        }
 
      </style>
@@ -41,9 +46,24 @@
   <script scr="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   
        
+<div class="navbar navbar-default navbar-fixed-top">
+       <div class="container">
+         <div class="navbar-header pull-left">
+           <a href="/mastersurvey" class="navbar-brand">Master Survey</a>
 
- 
+
+       </div>
+  </div>
+ </div>
   <div class="container" id="myContainer">
+    <h2>Here are the questions</h2>
+    <?php
+              if($error)
+              {
+                echo '<div class="alert alert-danger">'.$error.'</div>';
+              }
+        
+      ?>
     <?php
       $query0="SELECT type from webtype WHERE website like '%".$_GET['website']."%'";
       $result0=mysqli_query($link,$query0);
@@ -52,7 +72,7 @@
       $result=mysqli_query($link,$query);
       echo '<div class="row">
         <div class="col-md-12">
-          <form>';
+          <form method="post" action="">';
       while ($row=mysqli_fetch_row($result))
       {
         $query2="SELECT a.ansid,a.text from answers a, offeredans o where a.ansid=o.ansid and o.quesid='".$row[0]."'";
@@ -64,13 +84,18 @@
       }
         echo '<br>';
       }
-      echo '<input type="submit" name="submit" value=submit class="btn btn-success"></form>
+      echo '<input type="submit" name="submit" value="submit" class="btn btn-success"></form>
 
         </div>
     </div>';
 
     ?>
+
   </div>
- 
+  
 </body>
 </html>
+<?php 
+
+ ?>
+ 
