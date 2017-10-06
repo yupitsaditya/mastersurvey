@@ -42,7 +42,7 @@
     $row=mysqli_fetch_array($result);
     if($row)
     {
-      header("Location:http://www.google.com");
+      header("Location:clientPage.php?userName=".$_POST['username']);
     }
     else {
       $error=$error."Cannot find user with username and password";
