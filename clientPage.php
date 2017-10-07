@@ -38,7 +38,10 @@
        {
         padding: 50px;
        }
-       
+       li
+       {
+        margin: 2px;
+       }
        
      </style>
      <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
@@ -68,13 +71,17 @@
               </a>
             </li>
             
-            
+            <li class="active">
+              <a href="/mastersurvey" class="btn btn-info btn-lg">
+                <span class="glyphicon glyphicon-log-out"></span>SignOut
+              </a>
+            </li>
           </ul>
          
 
        </div>
   </div>
-  <div class="container page1" >
+  <div class="container" id="page1" >
     <div class="row">
        <div class="col-md-6 piechart_3d"   id="piechart_3d0"></div>
       <div class="col-md-6 piechart_3d"   id="piechart_3d1"></div>

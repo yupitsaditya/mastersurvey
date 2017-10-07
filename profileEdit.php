@@ -1,6 +1,7 @@
 <?php
 include("connection.php");
 include("upload.php");
+include("changePassword.php");
  ?>
 
 <!DOCTYPE html>
@@ -15,17 +16,22 @@ include("upload.php");
        body
        {
          
-         text-align: center;
-         height: 2400px; transition: background-color 1s ease-in; 
+        height: 600px;
+         transition: background-color 1s ease-in; 
         
          
        }
        #page1
        {
-        
-        height: 800px;
+        padding: 60px;
+        height: 700px;
         width: 100%;
          background-image: url('images/indexPhotos/page1.jpg');
+       	img {
+    max-width: 100%;
+    height: auto;
+    width: auto\9; /* ie8 */
+}
        }
        
        
@@ -39,11 +45,49 @@ include("upload.php");
   
        
 
- 
+ <div class="navbar navbar-default navbar-fixed-top">
+       <div class="container">
+         <div class="navbar-header pull-left">
+           <a href="javascript:history.back()" class="navbar-brand"><?php echo $_GET['userName']; ?></a>
+
+         </div>
+          <ul class="nav navbar-nav pull-right">
+            <li class="active">
+              <a href="/mastersurvey" class="btn btn-info btn-lg">
+                <span class="glyphicon glyphicon-log-out"></span>SignOut
+              </a>
+            </li>
+            
+            
+          </ul>
+          
+         
+
+       </div>
+        <?php 
+     if($error)
+    {
+      echo '<div class="alert alert-danger">'.$error.'</div>';
+    }
+    if($message)
+    {
+        echo '<div class="alert alert-success">'.$message.'</div>';
+    }
+    if($error777)
+    {
+      echo '<div class="alert alert-danger">'.$error777.'</div>';
+    }
+    if($message777)
+    {
+        echo '<div class="alert alert-success">'.$message777.'</div>';
+    }
+    ?>
+  </div>
+
   <div class="container" class="mySignUpForm" id="page1">
     <div class="row">
-     <h2>hello <?php echo $_GET['userName']; ?></h2>   
-     
+        
+    
     </div>
     <div class="row">
     	<div class="col-md-4">
@@ -66,11 +110,27 @@ include("upload.php");
 			    
 			        
 			        <br>
-			        <input class="input-group form-control-file" type="file" name="image" accept="image/*" />
+			        <label for ="image">Change Logo</label><input class="input-group form-control-file" type="file" name="image" accept="image/*" />
 			        <br>
 			        <input type="submit" name="submit" value="submit" class="btn btn-success">
 			      
 			  </form>
+		</div>
+		<div class="col-md-4 pull-right">
+
+			<h3>Change password</h3>
+			<form method="post" action="">
+				<label>Enter Old Password</label>
+				<input type="password" class="form-control" name="oldPassword">
+				<br>
+				<label>Enter New Password</label>
+				<input type="password" name="newPassword" class="form-control">
+				<br>
+				<label>Re-Enter New Password</label>
+				<input type="password" name="newPassword2" class="form-control">
+				<br>
+				<input type="submit" name="changePasswordSubmit" value="changePassword" class="btn btn-danger">
+			</form>
 		</div>
     </div>
   </div>

@@ -2,7 +2,7 @@
   $error="";
   $message="";
   $script="";
- 
+ $script22="";
   if(isset($_POST['submit']))
   {
     $check = getimagesize($_FILES["image"]["tmp_name"]);
@@ -38,9 +38,6 @@
       $error="error";
     }
   }
-  else
-    {
-        $error= "Please select an image file to upload.";
-    }
+
     
 ?>
