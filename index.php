@@ -41,6 +41,11 @@
         width: 100%;
         background-image: url('images/indexPhotos/page3.jpg');
        }
+       #indexImage
+       {
+        width: 40%;
+        height: 40%;
+       }
      </style>
      
    </head>
@@ -86,7 +91,10 @@
                 echo '<div class="alert alert-success">'.$message.'</div>';
               }
       ?>
-         <div class="col-md-6 col-md-offset-6">
+        <div class="col-md-6 ">
+          <img id="indexImage" src="images/Picture1.png">
+        </div>
+         <div class="col-md-6 ">
             <h3>Create an Account Now</h3>
             <h5>Because you want to know your customer</h5>
             
