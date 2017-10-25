@@ -74,7 +74,7 @@
       $error=$error."<br>username already taken";
     }
     else {
-      $query="INSERT into webown values(null,'".$_POST['signUpEmail']."','".$_POST['signUpName']."','".$_POST['signUpPassword']."','".$_POST['signUpWebsite']."')";
+      $query="INSERT into webown values(null,'".$_POST['signUpEmail']."','".$_POST['signUpName']."','".$_POST['signUpPassword']."','".$_POST['signUpWebsite']."',null)";
       $result=mysqli_query($link,$query);
       if($result)
         {
