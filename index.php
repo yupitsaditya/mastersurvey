@@ -93,6 +93,10 @@
       ?>
         <div class="col-md-6 ">
           <img id="indexImage" src="images/Picture1.png">
+          <p class="lead text-capitalize">We</p>
+          <p class="lead text-capitalize">Empower Organisations </p>
+          <p class="lead text-capitalize">with world class survey tools to help them</p>
+          <p class="lead text-capitalize">make better decisions</p>
         </div>
          <div class="col-md-6 ">
             <h3>Create an Account Now</h3>
