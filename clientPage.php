@@ -33,6 +33,7 @@
        #page2
        {
         padding: 50px;
+        text-align: center;
        }
        #page3
        {
@@ -96,12 +97,32 @@
        
     </div>
   </div>
-  <?php
-  include("graph.php"); 
-   ?>
+  
   <div class="container" id="page2" >
     <div class="row">
        <p>Compare</p>
+       <div class="col-md-6 "   ><h2 class="text-muted"><?php  echo $_GET['userName'];?></h2></div>
+      <div class="col-md-6 "   ><h2 class="text-muted">Other Websites</h2></div>
+       <div class="col-md-6 piechart_3d"   id="piechart_3dc0"></div>
+      <div class="col-md-6 piechart_3d"   id="piechart_3dcOther0"></div>
+      <div class="col-md-6 piechart_3d"   id="piechart_3dc1"></div>
+      <div class="col-md-6 piechart_3d"   id="piechart_3dcOther1"></div>
+      <div class="col-md-6 piechart_3d"   id="piechart_3dc2"></div>
+      <div class="col-md-6 piechart_3d"   id="piechart_3dcOther2"></div>
+      <div class="col-md-6 piechart_3d"   id="piechart_3dc3"></div>
+      <div class="col-md-6 piechart_3d"   id="piechart_3dcOther3"></div>
+      <div class="col-md-6 piechart_3d"   id="piechart_3dc4"></div>
+      <div class="col-md-6 piechart_3d"   id="piechart_3dcOther4"></div>
+      <div class="col-md-6 piechart_3d"   id="piechart_3dc5"></div>
+      <div class="col-md-6 piechart_3d"   id="piechart_3dcOther5"></div>
+      <div class="col-md-6 piechart_3d"   id="piechart_3dc6"></div>
+      <div class="col-md-6 piechart_3d"   id="piechart_3dcOther6"></div>
+      <div class="col-md-6 piechart_3d"   id="piechart_3dc7"></div>
+      <div class="col-md-6 piechart_3d"   id="piechart_3dcOther7"></div>
+      <div class="col-md-6 piechart_3d"   id="piechart_3dc8"></div>
+      <div class="col-md-6 piechart_3d"   id="piechart_3dcOther8"></div>
+      <div class="col-md-6 piechart_3d"   id="piechart_3dc9"></div>
+      <div class="col-md-6 piechart_3d"   id="piechart_3dcOther9"></div>
     </div>
   </div>
   <div class="container " id="page3">
@@ -109,6 +130,10 @@
        <p>Overall</p>
     </div>
   </div>
+  <?php
+  include("graph.php"); 
+  include("compareGraph.php"); 
+   ?>
 </body>
 </html>
 
