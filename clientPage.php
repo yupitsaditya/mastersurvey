@@ -38,6 +38,7 @@
        #page3
        {
         padding: 50px;
+        text-align: center;
        }
        li
        {
@@ -128,11 +129,44 @@
   <div class="container " id="page3">
     <div class="row">
        <p>Overall</p>
+       <table class="table table-hover table-bordered">
+    <thead>
+      <tr>
+        <th>Parameter</th>
+        <th>Result</th>
+        
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Average score of your website</td>
+        <td id="averageScore">yourScore</td>
+       
+      </tr>
+      <tr>
+        <td>Average score of your website when survey taker is Male</td>
+        <td id="averageScoreM">yourScore</td>
+        
+      </tr>
+      <tr>
+        <td>Average score of your website when survey taker is Female</td>
+        <td id="averageScoreF">yourScore</td>
+        
+      </tr>
+      <tr>
+        <td>Websites with higher average score than your website</td>
+        <td id="higherWeb">otherWebsites</td>
+        
+      </tr>
+    
+    </tbody>
+  </table>
     </div>
   </div>
   <?php
   include("graph.php"); 
   include("compareGraph.php"); 
+  include ("overall.php");
    ?>
 </body>
 </html>

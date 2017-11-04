@@ -1,0 +1,75 @@
+<div class="row">
+      	<div class="col-md-12">
+      		<form>
+      			<p>Here is your first question</p>
+      			<input type="radio" name="quesid" value="ansid">1
+
+      			<input type="radio" name="quesid" value="ansid">2
+      			<input type="submit" name="submit" value=submit class="btn btn-success">
+      		</form>
+ 
+      	</div>
+    </div>
+
+
+    $query2="SELECT a.ansid,a.text from answers a, offeredans o where a.ansid=o.ansid and o.quesid='".$row[0]."'";
+		$result2=mysqli_query($link,$query2);
+		while ($row2=mysqli_fetch_row($result2))
+      {
+      	
+      }
+
+
+
+       <script type="text/javascript">
+      google.charts.load("current", {packages:["corechart"]});
+      google.charts.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['ansid', 'count'],
+          ['1',     11],
+          ['2',      2],
+          ['3',  2],
+          ['4', 2],
+          ['5',    7]
+        ]);
+
+        var options = {
+          title: 'My Daily Activities',
+          is3D: true,
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('piechart_3d'));
+        
+        chart.draw(data, options);
+        
+      }
+    </script>
+
+
+    <div class="col-md-4 piechart_3d"   id="piechart_3d"></div>
+      
+
+      select username from webown w, webtype t
+WHERE w.website=t.website and t.type in (
+    SELECT t1.type from webown w1, webtype t1
+    where w1.username='quickCharge' and w1.website=t1.website);
+
+
+    SELECT ansid from response where quesid=1 and website in (
+        
+select username from webown w, webtype t
+WHERE w.website=t.website and t.type in (
+    SELECT t1.type from webown w1, webtype t1
+    where w1.username='quickCharge' and w1.website=t1.website))
+
+    select ansid from response where website='quickCharge' OR website='paytm' and quesid=1
+
+
+    SELECT ansid from response where quesid=1 and website<>'quickCharge' and website in ( select username from webown w, webtype t WHERE w.website=t.website and t.type in ( SELECT t1.type from webown w1, webtype t1 where w1.username='quickCharge' and w1.website=t1.website))
+
+
+
+
+
+    select website from response NATURAL join answers where website<>'quickcharge' and website in( select username from webown w, webtype t where w.website=t.website and t.type in( select t1.type from webown w1, webtype t1 where w1.username='quickcharge' and w1.website=t1.website)) GROUP BY (website) HAVING avg(text) > (select avg(text) from response natural join answers where website='quickcharge')
