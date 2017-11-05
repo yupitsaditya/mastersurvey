@@ -73,3 +73,23 @@ WHERE w.website=t.website and t.type in (
 
 
     select website from response NATURAL join answers where website<>'quickcharge' and website in( select username from webown w, webtype t where w.website=t.website and t.type in( select t1.type from webown w1, webtype t1 where w1.username='quickcharge' and w1.website=t1.website)) GROUP BY (website) HAVING avg(text) > (select avg(text) from response natural join answers where website='quickcharge')
+
+    select quesid,avg(text) from response NATURAL join answers WHERE website='paytm' group by quesid having avg(text)<=3;
+
+
+
+    CREATE TRIGGER `notifyOwner` AFTER INSERT ON `response`
+ FOR EACH ROW insert into notification select website,quesid from response NATURAL join answers 
+where website=new.website and 
+quesid not in(select quesid from notification 
+              where website=new.website) and quesid=new.quesid
+group by(quesid)
+having avg(text)<3
+
+
+CREATE TRIGGER `deleteNotifications` BEFORE INSERT ON `response`
+ FOR EACH ROW delete from notification where quesid in 
+(select quesid from response natural join answers 
+ where website=new.website group by(quesid)
+   having avg(text)>=3)
+and website=new.website and quesid=new.quesid

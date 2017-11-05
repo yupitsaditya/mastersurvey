@@ -64,6 +64,7 @@
             <li ><a href="#">Data Stats</a></li>
             <li><a href="#page2">Compare with similar wesbite</a></li>
             <li><a href="#page3">Overall Ratings</a></li>
+            <li><a href="#page4">Notifications</a></li>
             
           </ul>
           <ul class="nav navbar-nav pull-right">
@@ -101,7 +102,7 @@
   
   <div class="container" id="page2" >
     <div class="row">
-       <p>Compare</p>
+       <h2>Comparision With Other Websites</h2>
        <div class="col-md-6 "   ><h2 class="text-muted"><?php  echo $_GET['userName'];?></h2></div>
       <div class="col-md-6 "   ><h2 class="text-muted">Other Websites</h2></div>
        <div class="col-md-6 piechart_3d"   id="piechart_3dc0"></div>
@@ -128,7 +129,7 @@
   </div>
   <div class="container " id="page3">
     <div class="row">
-       <p>Overall</p>
+       <h2>Overall Ratings</h2>
        <table class="table table-hover table-bordered">
     <thead>
       <tr>
@@ -163,10 +164,25 @@
   </table>
     </div>
   </div>
+  <div class="container" id="page4" >
+    <div class="row" >
+      <h2>Notifications</h2>
+      <div class="alert alert-warning" id="notification1">
+        
+      </div>
+      <div class="alert alert-warning" id="notification2">
+        
+      </div>
+      <div class="alert alert-warning" id="notification3">
+        
+      </div>
+    </div>
+  </div>
   <?php
   include("graph.php"); 
   include("compareGraph.php"); 
   include ("overall.php");
+  include ("notification.php");
    ?>
 </body>
 </html>
