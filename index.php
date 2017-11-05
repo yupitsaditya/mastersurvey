@@ -163,22 +163,22 @@
     
       
       <div class="col-md-4">
-        <img src="images/indexPhotos/myTube.png" class="img-circle" alt="Cinque Terre" width="280" height="210">
+        <a href="/mastersurvey/myTube.html"><img src="images/indexPhotos/myTube.png" class="img-circle" alt="Cinque Terre" width="280" height="210"></a>
       </div>
       <div class="col-md-4">
-        <img src="images/indexPhotos/planMyTrip.png" class="img-circle" alt="Cinque Terre" width="280" height="210">
+        <a href="/mastersurvey/planMyTrip.html"><img src="images/indexPhotos/planMyTrip.png" class="img-circle" alt="Cinque Terre" width="280" height="210"></a>
       </div>
       <div class="col-md-4">
-       <img src="images/indexPhotos/quickCharge.png" class="img-circle" alt="Cinque Terre" width="280" height="210">
+       <a href="/mastersurvey/quickCharge.html"><img src="images/indexPhotos/quickCharge.png" class="img-circle" alt="Cinque Terre" width="280" height="210"></a>
        </div>
      </div>
      <div class="row">
       
       <div class="col-md-6">
-        <img src="images/indexPhotos/catalogueCar.png" class="img-circle" alt="Cinque Terre" width="280" height="210">
+        <a href="/mastersurvey/catalogueCars.html"><img src="images/indexPhotos/catalogueCar.png" class="img-circle" alt="Cinque Terre" width="280" height="210"></a>
       </div>
       <div class="col-md-6">
-        <img src="images/indexPhotos/shopKart.png" class="img-circle" alt="Cinque Terre" width="280" height="210">
+        <a href="/mastersurvey/shopKart.html"><img src="images/indexPhotos/shopKart.png" class="img-circle" alt="Cinque Terre" width="280" height="210"></a>
       </div>
       
      </div>
