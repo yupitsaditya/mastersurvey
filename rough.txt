@@ -93,3 +93,35 @@ CREATE TRIGGER `deleteNotifications` BEFORE INSERT ON `response`
  where website=new.website group by(quesid)
    having avg(text)>=3)
 and website=new.website and quesid=new.quesid
+
+
+DELIMITER $$
+CREATE DEFINER=`root`@`localhost` PROCEDURE `mapQtoA`(IN `st` INT, IN `en` INT)
+    NO SQL
+BEGIN
+    DECLARE v INT;
+    set v=st;
+    WHILE v<=en DO
+    
+    INSERT INTO `offeredans` (`quesid`, `ansid`) VALUES (v, '1');
+    INSERT INTO `offeredans` (`quesid`, `ansid`) VALUES (v, '2');
+    INSERT INTO `offeredans` (`quesid`, `ansid`) VALUES (v, '3');
+    INSERT INTO `offeredans` (`quesid`, `ansid`) VALUES (v, '4');
+    INSERT INTO `offeredans` (`quesid`, `ansid`) VALUES (v, '5');
+  set v=v+1;
+END WHILE;
+END$$
+DELIMITER ;
+
+
+DELIMITER $$
+CREATE DEFINER=`root`@`localhost` PROCEDURE `mapQuestionToType`(IN `st` INT, IN `en` INT, IN `mytype` VARCHAR(30))
+BEGIN
+    DECLARE v INT;
+    set v=st;
+    WHILE v<=en DO
+    INSERT INTO `surveyques` (`id`, `type`, `quesid`) VALUES (NULL, mytype, v);
+  set v=v+1;
+END WHILE;
+END$$
+DELIMITER ;
